@@ -1,0 +1,49 @@
+.btn {
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.btn {
+    font-family: $font-playfair-display;
+    position: relative;
+    z-index: 1;
+    min-width: 150px;
+    height: 42px;
+    line-height: 40px;
+    font-size: 14px;
+    font-weight: 400;
+    display: inline-block;
+    padding: 0 35px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: $white;
+    border: 1px solid $grey;
+    border-radius: 60px;
+    cursor: pointer;
+    @include transition-duration(500ms);
+
+    &:focus,
+    &:hover {
+        border-color: $hover;
+        font-weight: 400;
+        font-size: 14px;
+        background-color: $hover;
+        color: $second-color;
+        @include box-shadow($grey);
+    }
+
+    &.active {
+        border-color: $hover;
+        background-color: $hover;
+        color: $white;
+
+        &:focus,
+        &:hover {
+            border-color: $black;
+            background-color: $grey;
+            color: $black;
+        }
+    }
+}

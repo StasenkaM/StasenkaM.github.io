@@ -1,0 +1,238 @@
+@import '../sass/base/color';
+@import '../sass/base/media';
+@import '../sass/base/mixins';
+@import '../sass/base/flex';
+//@import '../sass/base/animations';
+@import '../sass/base/fonts';
+* {
+    @import '../sass/base/animations';
+    @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Playfair+Display:400,700");
+ }
+
+@import '../sass/blocks/header';
+@import '../sass/blocks/carousel';
+@import '../sass/blocks/gallery';
+@import '../sass/blocks/gallery_page';
+@import '../sass/blocks/about-me';
+@import '../sass/blocks/feeds';
+@import '../sass/blocks/pageup';
+@import '../sass/blocks/blog';
+@import '../sass/blocks/single_blog';
+@import '../sass/blocks/prices_page';
+//@import '../sass/blocks/preloader';
+
+
+.container {    
+    max-width: 1200px;    
+}
+
+/* body {
+    font-family: $font-poppins;
+    font-weight: 400;
+    font-size: 16px;
+    position: relative;
+    z-index: auto;
+} */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-opensans;
+    color: $black;
+    //line-height: 1.3;
+    //font-weight: 600;
+}
+
+h2 {
+    font-size: 30px 
+}
+
+//a, a:hover
+a:active,
+a:focus {
+    //color: $heading;
+    //text-decoration: none;
+    @include transition-duration(500ms);
+    //outline: none;
+    font-weight: 500;
+}
+
+p {
+    //line-height: 1.9;
+    color: $black;
+    //font-size: 16px;
+    font-weight: 400;
+    font-family: $font-opensans;
+}
+
+/* img {
+    width: 100%;
+    height: auto;
+} */
+
+/* ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+        margin: 0;
+        padding: 0;
+    }
+} */
+
+.bg-overlay {
+    position: relative;
+    z-index: 1;
+
+    &::after {
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+}
+
+/* .bg-img {
+    background-position: center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+} */
+
+
+// Magnific Popup
+
+.image-link {
+/*     cursor :-webkit-zoom-in;
+    cursor: -moz-zoom-in; */
+    cursor: zoom-in;
+  }
+
+.mfp-image-holder .mfp-close,
+.mfp-iframe-holder .mfp-close {
+    position: fixed;
+    z-index: 100;
+    color: $white;
+    right: 20px;
+    text-align: center;
+    padding-right: 0;
+    width: 100%;
+    top: 20px;
+    width: 30px;
+    background: $hover;
+    height: 30px;
+    line-height: 30px;
+}
+
+img.mfp-img {
+    @include box-shadow($box-shadow);
+}
+
+button.mfp-close,
+button.mfp-arrow {
+    background: $hover;
+}
+
+.mfp-bottom-bar {
+    display: none !important;
+}
+
+.mfp-bg {
+    background-color: $black;
+}
+
+.bg-transparent {
+    background-color: transparent !important;
+}
+
+.bg-gray {
+    background-color: $grey !important;
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+}
+
+textarea:invalid,
+input:invalid,
+textarea:required,
+input:required {
+    box-shadow: none !important;
+}
+
+.border {
+    border-color: $border;
+}
+
+.mfp-arrow-left::after {
+    border-right-color: transparent;
+}
+
+.mfp-arrow-left::before {
+    border-right-color: $white;
+}
+
+.mfp-arrow-right::after {
+    border-left-color: transparent;
+}
+
+.mfp-arrow-right::before {
+    border-left-color: $white;
+}
+
+/* This block of CSS adds opacity transition to background */
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+	opacity: 0;
+	//-webkit-backface-visibility: hidden;
+	-webkit-transition: all 0.3s ease-out; 
+	-moz-transition: all 0.3s ease-out; 
+	-o-transition: all 0.3s ease-out; 
+	transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+		opacity: 1;
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+		opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container, 
+.mfp-with-zoom.mfp-removing.mfp-bg {
+	opacity: 0;
+}
+
+
+
+/* padding-bottom and top for image */
+.mfp-no-margins img.mfp-img {
+	padding: 0;
+}
+/* position of shadow behind the image */
+.mfp-no-margins .mfp-figure:after {
+	top: 0;
+	bottom: 0;
+}
+/* padding for main container */
+.mfp-no-margins .mfp-container {
+	padding: 0;
+}
+
+
+
+/* aligns caption to center */
+.mfp-title {
+  text-align: center;
+  padding: 6px 0;
+}
+.image-source-link {
+  color: #DDD;
+}

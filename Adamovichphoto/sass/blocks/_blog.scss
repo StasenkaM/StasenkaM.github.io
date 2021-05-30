@@ -1,0 +1,179 @@
+.breadcrumb-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+
+    h2 {
+        font-size: 40px;
+        margin-bottom: 15px;}
+
+/*       @media #{$breakpoint-lg} {
+            font-size: 48px;
+        }
+
+        @media #{$breakpoint-md} {
+            font-size: 48px;
+        }
+
+        @media #{$breakpoint-xs} {
+            font-size: 36px;
+        }
+    } */
+
+    .breadcrumb {
+        position: relative;
+        padding: 0;
+        background-color: transparent;
+        @include justify-content-center;
+
+        .breadcrumb-item {
+            a {
+                color: $black;
+
+                &:hover,
+                &:focus {
+                    color: $hover;    }
+            }
+        }
+
+        .breadcrumb-item + .breadcrumb-item::before {
+            content: '\f101';
+            font-family: "FontAwesome";  }
+    }
+}
+
+ 
+
+.blog-news-area {
+    padding-top: 20px;
+    padding-bottom: 80px; 
+    img {
+        display: block;
+        margin: 0;
+        align-content: center;            
+        padding-bottom: 10px;
+        max-width: 330px;}    
+
+    .single-post-area {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 40px;
+        .post-thumbnail {
+            position: relative;
+            z-index: 1;
+            margin-bottom: 30px;
+            a {
+                display: block  }
+        }
+     }
+        .post-content {
+            position: relative;
+            z-index: 1;
+            &:hover,
+            &:focus {
+                .post-content {
+                    .post-title {
+                        color: $hover; }
+                }
+            }
+
+            .post-title {
+                font-weight: 400;
+                font-size: 20px;
+                display: block;
+                margin-bottom: 15px;
+                color: $black;
+                font-family: $font-playfair;
+
+                &:hover,
+                &:focus {
+                    color: $hover;
+                }
+            }
+
+            .post-meta {
+                position: relative;
+                z-index: 1;
+                margin-bottom: 15px;
+
+                a {
+                    position: relative;
+                    z-index: 1;
+                    font-size: 14px;
+                    color: $hover;
+                    display: inline-block;
+                    margin-right: 30px;
+
+                    &:last-child {
+                        margin-right: 0;
+
+                        &::before {
+                            content: '|';
+                            position: absolute;
+                            top: 0;
+                            left: -20px;
+                            z-index: 1;
+                        }
+                    }
+
+                    &:hover,
+                    &:focus {
+                        color: $hover;
+                    }
+                }
+            }
+
+            p {
+                margin-bottom: 0;
+            }
+        }
+
+    
+    
+
+
+
+    .btn {
+        font-family: $font-playfair;
+        position: relative;
+        z-index: 1;
+        min-width: 150px;
+        height: 42px;
+        line-height: 40px;
+        font-size: 14px;
+        font-weight: 400;
+        display: inline-block;
+        padding: 0 35px;
+        text-align: center;
+        text-transform: uppercase;
+        background-color: red;//$white;
+        color: green;//$black;
+        border: 1px solid $grey;
+        border-radius: 60px;
+        cursor: pointer;
+        @include transition-duration(500ms);
+
+  /*       &:focus,
+        &:hover {
+            border-color: orange;//$black;
+            font-weight: 400;
+            font-size: 14px;
+            background-color: orchid;//$grey;
+            color: $white;
+            @include box-shadow($grey);
+        } */
+
+        &.active {
+            border-color: $hover;
+            background-color: $white;
+            color: $hover;
+
+            &:focus,
+            &:hover {
+                border-color: $white;
+                background-color: $hover;
+                color: $white;
+            }
+        }
+    }
+    }

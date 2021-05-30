@@ -1,0 +1,162 @@
+.portfolio-area {
+    position: relative;
+    z-index: 1;
+    //padding: 80px;
+    
+    .projects-menu {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 40px;
+        text-decoration: none;
+        cursor: pointer;
+
+        .portfolio-menu .btn {
+            position: relative;
+            z-index: 1;
+            padding: 0;
+            border: 1px;
+            background-color: $white;
+            color: $black;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 0;
+            margin: 0 10px;
+            cursor: pointer;
+            @include transition-duration(500ms);
+                
+    /*             @media #{$breakpoint-xs} {
+                    font-size: 14px;
+                    margin: 0 5px;
+                } */
+
+            &::after {
+                @include transition-duration(500ms);
+                position: absolute;
+                width: 0%;
+                height: 3px;
+                background-color: $hover;
+                color: $black;
+                content: '';
+                bottom: -5px;
+                left: 0;
+                right: 0;
+                z-index: 1;
+                border-radius: 60px;
+                }
+
+                &.active {
+                    &::after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    
+
+
+    .single-portfolio-content {
+        position: relative;
+        z-index: 1;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        @include transition-duration(500ms);
+        overflow: hidden;
+
+        img {
+            width: 300px;
+            @include transition-duration(500ms);
+        }
+
+        .hover-content {   //черный прозрачный фон при наведении на фото
+            @include transition-duration(500ms);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.226);
+            opacity: 0;
+            visibility: hidden;
+            z-index: 10;
+
+            a {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: 0;
+                margin-left: -26px;
+                z-index: 100;
+                display: inline-block;
+                width: 52px;
+                height: 52px;
+                border-radius: 50%;
+                background-color: $hover;
+                text-align: center;
+                text-decoration: none;
+                line-height: 52px;
+                font-size: 30px;
+                color: $white;
+
+                &:hover,
+                &:focus {
+                    background-color: $grey;
+                }
+            }
+        }
+
+        &:hover,
+        &:focus {
+            img {
+               @include transform(scale(1));
+            }
+
+            .hover-content {
+                opacity: 1;
+                visibility: visible;
+                a {
+                    margin-top: -26px;
+                }
+            }
+        }
+    }
+
+    .btn {
+        &:focus {
+            box-shadow: none;
+        }
+    }
+    //кнопка ЕЩЕ
+.else-btn {
+    margin: 30px;
+    position: relative;
+    z-index: 1;
+    min-width: 160px;
+    height: 46px;
+    line-height: 42px;
+    font-size: 16px;
+    font-weight: 500;
+    display: inline-block;
+    padding: 0 30px;
+    text-align: center;
+    text-transform: capitalize;
+    background-color: transparent;
+    color: $black;
+    border: 2px solid $hover;
+    border-radius: 60px;
+    @include transition-duration(500ms);
+
+    &.btn-2 {
+        color: $hover;
+    }
+
+    &:focus,
+    &:hover {
+        font-weight: 500;
+        @include box-shadow($grey);
+        background-color: $hover;
+        color: $white;
+    }
+}    
+
+}
