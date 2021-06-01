@@ -98,23 +98,24 @@ $(document).ready(function(){
     
     // Smooth scroll and pageup
 
-    $(window).scroll(function() {
-        if ($(this).scrollTop() > 1600) {
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 900) {
             $('.pageup').fadeIn();
         } else {
             $('.pageup').fadeOut();
         }
     });
 
-    $("a[href=#up]").click(function(){ 
+    $("a[href=#up]").click(function (){ 
         console.log("Fsdfsfsf")     //для плавного скролла вверх по page up
         const _href = $(this).attr("href");
         $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
         return false;
     });
+ // Pageup end
 
      //адаптивное меню - не рабоатает??
-    function myFunction() {
+     function myFunction() {
         var x = document.getElementById("myTopnav");
         if (x.className === "topnav") {
             x.className += " responsive";
@@ -122,22 +123,34 @@ $(document).ready(function(){
             x.className = "topnav";
         }
     }
-    // function myfunction () {
-    // //(local function) myFunction(): {
-    //     $(window).onclick(function() {
-    //         var x = document.getElementById("myTopnav");
-    //         if (x.className === "topnav") {
-    //             x.className += " responsive";
-    //         } else {
-    //             x.className = "topnav";
-    //         }
-    //     });
-    // }
 
-    jarallax(document.querySelectorAll('.jarallax'), {
+
+
+/*     window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 120 || document.documentElement.scrollTop > 120) {
+            document.getElementById("PageUp").style.display = "block";
+        } else {
+            document.getElementById("PageUp").style.display = "none";
+        }
+}
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    } */
+
+
+
+
+
+
+   /*  jarallax(document.querySelectorAll('.jarallax'), {
         speed: 0.2
     });
-    
+     */
     /* var jarallax = new Jarallax();
     jarallax.addAnimation('.Prices-thumbnail bg-img jarallaxs, [{progress:'0%', top:'100%'},{progress:'100%', top:'0%'}]); */
         
@@ -160,7 +173,7 @@ $(document).ready(function(){
 		}
 	}); */
 
-    $('.portfolio-img').magnificPopup({
+/*     $('.portfolio-img').magnificPopup({
             type: 'image',
             // closeOnContentClick: true,
             modal: true,
@@ -175,7 +188,7 @@ $(document).ready(function(){
             zoom: {
                 enabled: true
             }
-        });
+        }); */
 
     new WOW().init();
 

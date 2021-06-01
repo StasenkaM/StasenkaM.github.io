@@ -30,21 +30,27 @@
         &__link {
             position: absolute;
             margin: 0;
-            top: 0;
-            bottom: 0;
             left: 0;
             right: 0;
             height: 100%;
             width: 100%;
+            cursor: pointer;
             opacity: 0;
             transition: .5s ease;
-            background-color: #0000007c;
-            &:hover {
+            background-color: #0000007c;            
+            
+            &:hover {                                                                      
+                opacity: 1; 
+                color: #00000000; 
                 text-decoration: none;
-                color: $white;
-                text-align: center;
-                font-size: 24px;
-                opacity: 1; } 
+                h6{
+                    color: $white;
+                    text-align: center;
+                    position: relative;
+                    top: 45%;
+                    font-size: 24px;
+                    text-decoration: none;
+                        }}
             }
         }
 

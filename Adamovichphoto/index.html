@@ -10,30 +10,30 @@
     <link rel="shortcut icon" href="#" type="image/x-icon">    
     
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous"> 
     
-    <link rel="stylesheet" href="/css/bootstrap-reboot.min.css">
+    <!-- <link rel="stylesheet" href="/css/bootstrap-reboot.min.css"> -->
     <!-- animation library-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" >
     <!-- fonts-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/fonts.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
      <!-- Slick-slider -->
     <link rel="stylesheet" href="/css/slick.css">
     <!-- owl.carusel -->
     <link rel="stylesheet" href="/css/owl.carousel.min.css">
-    <script src="/css/owl.theme.default.min.css"></script>
+    
 
         <!-- Magnific Popup core CSS file -->
-    <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
+    <!-- <link rel="stylesheet" href="magnific-popup/magnific-popup.css"> -->
 
     <link rel="stylesheet" href="/css/style.min.css">
     <link rel="stylesheet" href="/css/stylemin.css">
 </head>
 
 <body>
-    <header class='header'>                       
+    <header id="up" class='header'>                       
         <div class="container">
            <!-- Logo -->
           <div class="logo">
@@ -49,8 +49,7 @@
             <a   href="./blog.html">Блог</a>
             <a   href="#feeds">Отзывы</a>
             
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-              <i class="fa fa-bars"></i></a>                          
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">☰</a>                   
            </div>
            <!-- Nav End -->  
         </div>
@@ -94,37 +93,44 @@
 
                 <div class="col-md-4">                                     
                   <div class="gallery_item gallery_item_1">                           
-                    <a class="gallery_item gallery_item__link">Новорожденные</a>                            
+                    <a class="gallery_item gallery_item__link">
+                      <h6 class="link_header">Новорожденные</h6>
+                    </a>                            
                 </div> 
                </div>
 
                 <div class="col-md-4">
                     <div class="gallery_item gallery_item_2">                      
-                     <a href="#" class="gallery_item gallery_item__link">В ожидании</a>
+                     <a href="#" class="gallery_item gallery_item__link">
+                      <h6 class="link_header">В ожидании</h6></a>
                    </div>         
                 </div>
 
                 <div class="col-md-4">
                     <div class="gallery_item gallery_item_3">
-                     <a href="#" class="gallery_item gallery_item__link">Детки старше 1 года</a>
+                     <a href="#" class="gallery_item gallery_item__link">
+                      <h6 class="link_header">Детки старше 1 года</h6></a>
                     </div>
                  </div>
 
                 <div class="col-md-4">
                     <div class="gallery_item gallery_item_4">
-                    <a href="#" class="gallery_item gallery_item__link">Малыши до 1 года</a>
+                    <a href="#" class="gallery_item gallery_item__link">
+                      <h6 class="link_header">Малыши до 1 года</h6></a>
                     </div>                   
                 </div>
 
                 <div class="col-md-4">
-                    <div class="gallery_item gallery_item gallery_item_5">
-                     <a href="#" class="gallery_item__link">Крещение</a>             
+                    <div class="gallery_item gallery_item_5">
+                     <a href="#" class="gallery_item gallery_item__link">
+                      <h6 class="link_header">Крещение</h6></a>             
                     </div>
                 </div>
 
                 <div class="col-md-4">
                     <div class="gallery_item gallery-item_6">
-                    <a href="#" class="gallery_item gallery_item__link">Фотокниги</a>
+                    <a href="#" class="gallery_item gallery_item__link">
+                      <h6 class="link_header">Фотокниги</h6></a>
                    </div>
                 </div>
             
@@ -152,8 +158,8 @@
                         Волшебную память об ускользающих мгновениях!<br>‍</p>
 
                         <div class="about-me about-me__social">
-                            <a href="#" class="fa fa-facebook"></a>
-                            <a href="#" class="fa fa-instagram"></a>
+                            <a href="https://www.facebook.com/adamovichphoto/" class="fa fa-facebook"></a>
+                            <a href="https://www.instagram.com/adamovichnb/" class="fa fa-instagram"></a>
                     </div>
                     </div>                    
                 </div>                       
@@ -258,9 +264,11 @@
    
      <!-- PAGE UP -->
 
-    <a id="pageup" href="#up" class="pageup"> <!--подняться вверх-->
+   <a id="pageup" href="#up" class="pageup"> 
         <img src="/src/icons/up-circle.png" alt="up">
-    </a>
+    </a> 
+    <!-- <button onclick="topFunction()" id="PageUp" class="page_up" href="#up"><img src="/src/icons/up-circle.png" alt="up"></button> -->
+
     <!-- All JS Files -->
 
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -274,17 +282,14 @@
 
     
     <!-- Magnific Popup core JS file -->
-    <script src="/src/js/jquery.magnific-popup.min.js"></script>
-    <script src="/src/js/isotope.pkgd.min.js"></script>
-    
-    <!-- <script src="/src/js/jarallax.min.js"></script> -->
-    <script src="/src/js/jarallax.min.js"></script>
-
-    
-    <script src="/src/js/wow.min.js"></script>
+    <!-- <script src="/src/js/jquery.magnific-popup.min.js"></script>-->
+    <!--<script src="/src/js/isotope.pkgd.min.js"></script> -->
+      
+    <!-- <script src="/src/js/jarallax.min.js"></script>     -->
+    <script src="/css/owl.theme.default.min.css"></script>
     <script src="/src/js/owl.carousel.min.js"></script>
-    <script src="/src/js/slick.min.js"></script>
-    <!-- <script src="/src/js/active.script.js"></script> -->
+    <script src="/src/js/slick.min.js"></script> 
+    <script src="/src/js/wow.min.js"></script>      
     <script src="/src/js/script.js"></script>
 </body>
 

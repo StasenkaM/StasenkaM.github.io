@@ -2,7 +2,6 @@
 @import '../sass/base/media';
 @import '../sass/base/mixins';
 @import '../sass/base/flex';
-//@import '../sass/base/animations';
 @import '../sass/base/fonts';
 * {
     @import '../sass/base/animations';
@@ -19,7 +18,7 @@
 @import '../sass/blocks/blog';
 @import '../sass/blocks/single_blog';
 @import '../sass/blocks/prices_page';
-//@import '../sass/blocks/preloader';
+@import '../sass/blocks/preloader';
 
 
 .container {    
@@ -38,13 +37,15 @@ h1,
 h2,
 h3,
 h4,
-h5,
-h6 {
+h5
+ {
     font-family: $font-opensans;
     color: $black;
     //line-height: 1.3;
     //font-weight: 600;
 }
+
+h6 { font-family: $font-opensans;}
 
 h2 {
     font-size: 30px 
@@ -68,21 +69,6 @@ p {
     font-family: $font-opensans;
 }
 
-/* img {
-    width: 100%;
-    height: auto;
-} */
-
-/* ul {
-    margin: 0;
-    padding: 0;
-
-    li {
-        margin: 0;
-        padding: 0;
-    }
-} */
-
 .bg-overlay {
     position: relative;
     z-index: 1;
@@ -99,18 +85,11 @@ p {
     }
 }
 
-/* .bg-img {
-    background-position: center center !important;
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
-} */
-
-
 // Magnific Popup
 
-.image-link {
+/* .image-link {
 /*     cursor :-webkit-zoom-in;
-    cursor: -moz-zoom-in; */
+    cursor: -moz-zoom-in; 
     cursor: zoom-in;
   }
 
@@ -187,7 +166,7 @@ input:required {
     border-left-color: $white;
 }
 
-/* This block of CSS adds opacity transition to background */
+/* This block of CSS adds opacity transition to background 
 .mfp-with-zoom .mfp-container,
 .mfp-with-zoom.mfp-bg {
 	opacity: 0;
@@ -212,27 +191,27 @@ input:required {
 
 
 
-/* padding-bottom and top for image */
+/* padding-bottom and top for image 
 .mfp-no-margins img.mfp-img {
 	padding: 0;
 }
-/* position of shadow behind the image */
+/* position of shadow behind the image 
 .mfp-no-margins .mfp-figure:after {
 	top: 0;
 	bottom: 0;
 }
-/* padding for main container */
+/* padding for main container 
 .mfp-no-margins .mfp-container {
 	padding: 0;
 }
 
 
 
-/* aligns caption to center */
+/* aligns caption to center 
 .mfp-title {
   text-align: center;
   padding: 6px 0;
 }
 .image-source-link {
   color: #DDD;
-}
+} */

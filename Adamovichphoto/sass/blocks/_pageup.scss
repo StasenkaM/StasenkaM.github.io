@@ -1,4 +1,4 @@
-.pageup {
+ .pageup {
     // display: none;
     position: fixed;
     bottom: 40px;
@@ -6,11 +6,13 @@
     width: 40px;
     height: 40px;
     z-index: 100;
+    cursor: pointer;
     img {
         width: 100%;
     &:hover {
-        background-color: none;
-        color: $hover;
-        }
+        background-color: $hover;
+        border-radius: 50%;
+            }
     }
-}
+} 
+
